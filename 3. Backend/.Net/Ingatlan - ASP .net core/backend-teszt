@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "3febd627-674c-4af4-a9f8-ae030e946c5b",
+		"name": "Ingatlan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/ingatlan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ingatlan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/ingatlan/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ingatlan",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {        \r\n        \"leiras\": \"asdasdasdasdasd\",\r\n        \"hirdetesDatuma\": \"2022-03-10\",\r\n        \"tehermentes\": true,        \r\n        \"kepUrl\": \"kep.jpg\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/ingatlan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ingatlan"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

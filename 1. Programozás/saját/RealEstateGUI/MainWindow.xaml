@@ -1,0 +1,33 @@
+﻿<Window x:Class="RealEstateGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RealEstateGUI"
+        mc:Ignorable="d"
+        Title="Ingatlanok" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox DisplayMemberPath="Name" x:Name="lbNames" Grid.Column="0" SelectionChanged="lbNames_SelectionChanged"/>
+        <StackPanel x:Name="spData" Grid.Column="1" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Eladó neve:"/>
+                <Label x:Name="lblSellerName" Content="{Binding Name}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Eladó telefonszáma:"/>
+                <Label x:Name="lblSellerPhone" Content="{Binding Phone}"/>
+            </StackPanel>
+            <StackPanel>
+                <Button x:Name="btnLoad" Content="Hírdetések betöltése" Click="btnLoad_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Hírdetések száma:"/>
+                <Label x:Name="lblAdCount" Content="{Binding AdsCount}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
